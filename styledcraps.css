@@ -1,0 +1,246 @@
+html {
+    background: url(./img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: fit;
+}
+img.bg {
+    min-height: auto;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  h1, h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bolder;
+    font-family: cursive;
+}
+.play {
+    background: rgba(0, 0, 0, 0.11);
+}
+  
+p {
+    font-weight:600;
+    color: rgb(255, 255, 255);
+}
+  @media screen and (max-width: 1024px) { 
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   
+    }
+  }
+
+    {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #c60e0e;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    font: 16px/1.5 "Dosis", sans-serif;
+    background: var(--main-white-color);
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper>* {
+    padding: 20px;
+}
+
+.page-main {
+    margin-top: -10rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background: var(--main-purple-color) url() no-repeat center / cover;
+    background-blend-mode: luminosity;
+    color: var(--main-white-color);
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden;
+}
+
+.col {
+    margin: 2rem;
+    width: 100%;
+    height: auto;
+    padding: .8rem;
+}
+
+.page-header,
+.page-footer,
+.page-main .text-wrapper {
+    overflow: hidden;
+}
+
+.logo {
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.page-header nav:hover {
+    color: #c60e0e;
+}
+
+.rounded {
+    border-radius: 0.25rem !important;
+    border-color: red;
+    color: white;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button:active {
+    border: #a58d00;
+}
+
+.border-danger {
+    border: 5px solid #c60e0e;
+}
+.page-header {
+    position: relative;
+    background-color: #a58d00;
+    padding-left: 2%;
+    padding-right: 5%;
+}
+
+
+.h2,
+h2 {
+    font-size: 2rem;
+    color: #c60e0e;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: beige;
+}
+
+
+a:hover {
+    color: rgb(241, 66, 66);
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+select {
+    color:#c60e0e;
+    border-color: #a58d00;
+}
+.page-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: beige;
+}
+
+
+.page-header ul {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.page-header ul li:not(:last-child) {
+    padding-right: 15px;
+}
+
+@media screen and (min-width: 550px) {
+    .page-header ul {
+        width: auto;
+        margin-top: 0;
+    }
+
+
+    .page-header .cta-contact {
+        order: 1;
+        background-color: transparent;
+        border: 1px solid #c60e0e;
+        padding: .6rem;
+        color: #white;
+    }
+}
+
+/*Footer*/
+
+.page-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    color: #001eff;
+    background-color: #a58d00;
+}
+
+.page-footer ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 550px) {
+    .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-footer ul {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+    background: var(--main-purple-color) url(IMG_SRC) no-repeat center / cover;
+    background-blend-mode: luminosity;
+    color: var(--main-white-color);
+}
+
+.page-main div {
+    max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+    .page-main {}
+}
+
+li {
+    list-style-type: none;
+    padding-right: 1rem;
+}
