@@ -15,7 +15,7 @@
             background: url(./markus-krisetya-Vkp9wg-VAsQ-unsplash.jpg) no-repeat center center fixed;
             background-size: 100%vw;
             max-height: auto;
-            margin-top: 5rem;
+            margin-top: 3rem;
             max-width: 100%vw;
         }
 
@@ -33,9 +33,9 @@
             opacity: .9;
             background-size: cover;
             width: auto;
-            margin-left: 4rem;
-            margin-right: 4rem;
             height: auto;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .lastResult {
@@ -56,7 +56,7 @@
     <p class="col-sm 8 h3 pt-3 pb-3 text-info" id="outputText">Enter a number below:</p>
     <p class="lowOrHi text-warning"></p>
     <p class="pb-3 targetNum text-warning"></p>
-    <input class="mb-4" placeholder="Enter a number" id="inputText">
+    <input class="mb-4" type="number" placeholder="Enter a number" id="inputText">
 
 
     <div class="flex-row align-middle">
@@ -84,7 +84,7 @@
         let guessCount = 1;
         let resetButton;
         let remaining = 10
-
+        
         setMax.textContent = `Your Maximum Number is ${maxiNum}`;
         function checkTarget() {
 
@@ -96,6 +96,10 @@
             remaining--
             if (userGuess < 1 || userGuess === 0) {
                 lastGuess.textContent = `Please Enter a valid Number`
+                return false;
+            }
+            if (userGuess === NaN) {
+                outcome.textContent = `Please Enter a number`
                 return false;
             }
             if (userGuess === targetNum) {
@@ -134,21 +138,23 @@
         });
         submitButton.addEventListener('click', checkTarget);
         playAgainButton.addEventListener('click', function () {
+           
             location.reload();
         }
         )
-        playAgainButton.addEventListener("keypress", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("playAgainButton").click();
-            }
-
-        });
+    
 
         function setGameOver() {
             inputText.disabled = true;
             submitButton.disabled = true;
+            playAgainButton.addEventListener('keypress', function (event){
+            if (event.key === "Enter") {
+                document.getElementById("playAgainButton").click();
+                
+            }
+            location.reload();
         }
+        )};
 
 
 
