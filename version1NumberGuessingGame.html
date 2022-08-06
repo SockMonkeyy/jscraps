@@ -17,6 +17,7 @@
             max-height: auto;
             margin-top: 3rem;
             max-width: 100%vw;
+
         }
 
         h1 {
@@ -36,6 +37,13 @@
             height: auto;
             max-width: 800px;
             margin: 0 auto;
+            margin-top: 5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .offcanvas-title {
+            padding-left: 25%;
         }
 
         .lastResult {
@@ -70,13 +78,13 @@
                         <a class="nav-link" href="https://sockmonkeyy.github.io/QuickQuiz/">Web Dev Quiz</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"
-                        href="https://sockmonkeyy.github.io/myRPS/">Rock, Paper, Scissors</a>
+                        <a class="nav-link" href="https://sockmonkeyy.github.io/myRPS/">Rock, Paper, Scissors</a>
                     </li>
             </div>
         </div>
     </div>
 </nav>
+
 <body class="bg-dark bg text-center rounded" style="--bs-bg-opacity: .5;">
     <div class="p-4 form col-sm-6 text-center mt-5" id="container"></div>
     <div>
@@ -116,7 +124,7 @@
         let guessCount = 1;
         let resetButton;
         let remaining = 10
-        
+
         setMax.textContent = `Your Maximum Number is ${maxiNum}`;
         function checkTarget() {
 
@@ -170,23 +178,24 @@
         });
         submitButton.addEventListener('click', checkTarget);
         playAgainButton.addEventListener('click', function () {
-           
+
             location.reload();
         }
         )
-    
+
 
         function setGameOver() {
             inputText.disabled = true;
             submitButton.disabled = true;
-            playAgainButton.addEventListener('keypress', function (event){
-            if (event.key === "Enter") {
-                document.getElementById("playAgainButton").click();
-                
+            playAgainButton.addEventListener('keypress', function (event) {
+                if (event.key === "Enter") {
+                    document.getElementById("playAgainButton").click();
+
+                }
+                location.reload();
             }
-            location.reload();
-        }
-        )};
+            )
+        };
 
 
 
